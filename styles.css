@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    font-family: helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fffbf2;
+}
+h1{
+  font-size: 32px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #282828;
+
+}
+
+h2{
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #282828;
+
+
+}
+
+p{
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #282828;
+}
+
+a {
+  font-family: helvetica, sans-serif;
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #fffbf2;
+}
+
+.logo {
+    max-width: 40%;
+    height: auto;
+}
+.logo-main {
+    max-width: 70%;
+    height: auto;
+}
+
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menu ul li {
+    margin: 0 210px;
+}
+
+.menu ul li a {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.photo-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.photo-column img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.column-picture:hover {
+  -ms-transform: scale(0.98); /* IE 9 */
+  -webkit-transform: scale(0.98); /* Safari 3-8 */
+  transform: scale(0.98);
+}
+
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials li {
+    margin: 0 %;
+}
+
+.socials li a {
+    color: #fff;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-column {
+        margin-bottom: 20px;
+    }
+    .logo {
+        max-width: 95%;
+        height: auto;
+    }
+    .logo-main {
+        max-width: 95%;
+        height: auto;
+    }
+}
