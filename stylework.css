@@ -59,8 +59,8 @@ body {
 }
 
 .gallery-item {
-    flex: 1 1 calc(33% - 20px); /* Makes each item take up 25% of the width minus the gap */
-    max-width: calc(33% - 20px); /* Prevents items from exceeding the 25% width */
+    flex: 1 1 calc(33% ); /* Makes each item take up 25% of the width minus the gap */
+    max-width: calc(33% - 10px); /* Prevents items from exceeding the 25% width */
     text-decoration: none; /* Removes underline from links */
 }
 
