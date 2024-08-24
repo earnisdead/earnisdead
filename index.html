@@ -84,6 +84,25 @@ data-image{
     .column {
         margin: 5px 0;
     }
+
+#loader {
+    position: fixed; /* Fixes the loader to cover the entire viewport */
+    top: 0;          /* Ensures loader covers from top */
+    left: 0;         /* Ensures loader covers from left */
+    right: 0;        /* Ensures loader covers from right */
+    bottom: 0;       /* Ensures loader covers from bottom */
+    width: 100%;     /* Full width of the screen */
+    height: 100%;    /* Full height of the screen */
+    background-color: #000000; /* Background color for the loader screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures loader is above all other content */
+}
+#loader img {
+    width: 95%; /* Adjust the size of the loader image */
+    height: auto;
+}
 }
 
     </style>
@@ -95,13 +114,13 @@ data-image{
 
     <div class="container">
         <div class="column">
-            <a href="#" class="hover-link" data-image="images/workwebcrop.gif">work</a>
+            <a href="/work" class="hover-link" data-image="images/workwebcrop.gif">work</a>
         </div>
         <div class="column">
-            <a href="#" class="hover-link" data-image="images/aboutwebcrop.gif">about</a>
+            <a href="/about" class="hover-link" data-image="images/aboutwebcrop.gif">about</a>
         </div>
         <div class="column">
-            <a href="#" class="hover-link" data-image="images/giftshopwebcrop2.gif">gift shop</a>
+            <a href="/shop" class="hover-link" data-image="images/giftshopwebcrop2.gif">gift shop</a>
         </div>
     </div>
     
