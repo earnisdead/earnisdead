@@ -1,0 +1,117 @@
+body {
+    font-family: helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+h1{
+  font-size: 45px;
+  line-height: 20px;
+  font-weight: 600;
+  
+  text-align: center;
+  letter-spacing: -3px;
+
+}
+
+h2{
+  font-size: 45px;
+  font-style: italic;
+  line-height: 20px;
+  font-weight: 300;
+  
+  text-align: center;
+  letter-spacing: -3px;
+
+
+}
+
+p{
+  font-size: 45px;
+  line-height: 30px;
+  font-weight: 300;
+  
+  text-align: center;
+  letter-spacing: -3px;
+}
+h2, h1, p {
+    color: white;
+}
+
+a {
+  font-family: helvetica, sans-serif;
+    text-decoration: none;
+    color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap to the next line */
+    justify-content: flex-start; /* Aligns items to the start of the container */
+    padding: 10px;
+    gap: 10px; /* Space between images */
+    align-items: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33% - 20px); /* Makes each item take up 25% of the width minus the gap */
+    max-width: calc(33% - 20px); /* Prevents items from exceeding the 25% width */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.gallery-item img {
+    width: 100%; /* Ensures the image fills its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Removes the bottom whitespace in links */
+}
+.menu ul {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.menu ul li {
+    margin: 0 ;
+}
+
+.menu ul li a {
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: -3px;
+    color: #fff;
+}
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+}
+.main-content {
+    padding: 20px;
+}
+
+@media (max-width: 1200px) {
+    .gallery-item {
+        flex: 1 1 calc(33.333% - 20px); /* Adjusts the width to 33.33% for smaller screens */
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 800px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px); /* Adjusts the width to 50% for even smaller screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-item {
+        flex: 1 1 calc(100% - 20px); /* Each image takes full width on very small screens */
+        max-width: calc(100% - 20px);
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>earnisdead</title>
+    <link rel="stylesheet" href="styleintro.css">
+    <style>
+
+    .flex-container {
+        display: flex;
+        background-color: DodgerBlue;
+        align-content: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+
+      }
+      
+    .flex-container > div {
+        background-color: #f1f1f1;
+        
+        padding: 20px;
+        font-size: 30px;
+      }
+    .element {
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+    a.index{
+      font-family: helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+      color: blue;
+      text-decoration: none;
+    }
+
+   .hover_img a { position:relative; }
+    .hover_img a span { position:absolute; left: 0; display:none; z-index:99; }
+    .hover_img a:hover span { display:block; }
+
+
+    @media (max-width: 430px) {
+        flex-container {
+            flex-direction: column;
+    }
+    </style>
+</head>
+<body>
+   
+    
+      
+     
+      
+      <div class="flex-container">
+        <div class="element">
+            <div class="hover_img">
+                <a class="index" href="#elrollo">work<span><img  src="images/work.gif" alt="work" width="300" /></span></a>
+              </div>
+        </div>
+        <div class="element">
+            <div class="hover_img">
+                <a class="index" href="#elrollo">work<span><img  src="1/work.gif" alt="butter knife" width="300" /></span></a>
+              </div>
+        </div>
+        <div class="element">
+            <div class="hover_img">
+                <a class="index" href="#elrollo">work<span><img  src="1/work.gif" alt="butter knife" width="300" /></span></a>
+              </div>
+        </div>
+
+       
+      </div>
+
+   
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>earnisdead</title>
+    <style>
+       
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: helvetica, sans-serif;
+    background-color: black;
+    
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+.column {
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 100px;
+    padding: auto;
+}
+
+.hover-link {
+    
+    font-size: 40px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 20px;
+    width: 100%;
+   
+}
+
+.hover-link:hover {
+    cursor: pointer;
+}
+data-image{
+    margin: 1px;
+}
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #black; /* Background color for the loader screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure loader is above all other content */
+}
+
+#loader img {
+    width: 80%; /* Adjust the size of the loader image */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .column {
+        margin: 5px 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div id="loader">
+        <img src="images/earnweb.gif" alt="Loading...">
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <a href="/work" class="hover-link" data-image="images/workwebcrop.gif">work</a>
+        </div>
+        <div class="column">
+            <a href="/about" class="hover-link" data-image="images/aboutwebcrop.gif">about</a>
+        </div>
+        <div class="column">
+            <a href="shop" class="hover-link" data-image="images/giftshopwebcrop2.gif">gift shop</a>
+        </div>
+    </div>
+    
+    <script>
+         // JavaScript for loader with specific duration
+    window.addEventListener('load', function() {
+        // Set the loader to last for a specific amount of time
+        const loader = document.getElementById('loader');
+        
+        // Specify the time in milliseconds (e.g., 3000ms = 3 seconds)
+        const loaderDuration = 3000;
+
+        // Hide the loader after the specified time
+        setTimeout(function() {
+            loader.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Enable scrolling once loader is hidden
+        }, loaderDuration);
+    });
+
+        const links = document.querySelectorAll('.hover-link');
+
+        links.forEach(link => {
+            link.addEventListener('mouseover', function() {
+                const image = this.getAttribute('data-image');
+                this.style.backgroundImage = `url(${image})`;
+                this.style.color = 'transparent';
+                this.style.backgroundSize = 'contain';
+                this.style.backgroundRepeat = 'no-repeat';
+                this.style.backgroundPosition = 'center';
+            });
+
+            link.addEventListener('mouseout', function() {
+                this.style.backgroundImage = 'none';
+                this.style.color = 'white';
+            });
+        });
+
+        
+    </script>
+    
+</body>
+</html>
